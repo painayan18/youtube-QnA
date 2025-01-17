@@ -24,7 +24,7 @@ def main():
 
     # 1) Get the OpenAI API key from the user
     load_dotenv()
-    openai_api_key = st.secrets("OPENAI_API_KEY")
+    openai_api_key = st.secrets["OPENAI_API_KEY"]
 
     if openai_api_key:
         openai.api_key = openai_api_key  # Set the key for openai
