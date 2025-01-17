@@ -39,8 +39,8 @@ def main():
         st.session_state.chat_history = []
 
     # 4) Button to download and transcribe
-    if youtube_url and openai_api_key:
-        if st.button("Download & Transcribe with Whisper"):
+    if openai_api_key:
+        if st.button("Download & Transcribe with Whisper") and youtube_url:
             with st.spinner("Downloading video and transcribing..."):
                 transcript = download_and_transcribe_youtube(youtube_url)
                 if transcript is None:
